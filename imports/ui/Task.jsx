@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { ListItem, Input, Icon } from 'react-onsenui';
+import { ListItem, Input, Icon, Checkbox } from 'react-onsenui';
 
 import { Tasks } from '../api/tasks.js';
 
@@ -17,10 +17,9 @@ const Task = ({task, onClick}) => {
   return (
     <ListItem modifier="longdivider" tappable>
       <label className="left">
-        <Input
-          type="checkbox"
+        <Checkbox
           checked={task.checked}
-          onClick={toggleChecked}
+          onChange={toggleChecked}
         />
       </label>
       <div
